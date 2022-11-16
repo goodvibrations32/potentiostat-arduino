@@ -1,0 +1,55 @@
+#+TITLE: Potentiostat
+* DONE Proof of consept
+CLOSED: [2022-11-07 Δευ 13:54]
+** Link
+Το παρακάτω μήνυμα αφορά τον φοιτητή με αριθμό μητρόου: TM6220
+
+Για την επίσκεψή σου στο εικονικό εργαστήριο TINKERCAD  του μαθήματος ΜΗΧΑΤΡΟΝΙΚΑ ΣΥΣΤΗΜΑΤΑ ΙΙ ακολούθησε τον παρακάτω σύνδεσμο:
+
+ https://www.tinkercad.com/joinclass/L3NVJJM8GV1J
+
+Στην συνέχεια επίλεξε join with Nickname  βάζοντας ως nickname τον παρακάτω κωδικό:
+tm62200584
+
+Καλή αρχή!
+
+Δρ. Φασουλάς Ιωάννης.
+
+* DONE B.O.M.
+CLOSED: [2022-11-07 Δευ 17:45]
+** IC's 'n' diode
+| compartment            | amount | Grobot |
+| volt-regulator for -5V |      1 | check  |
+| LM78L08                |      1 | check  |
+| LM79L08                |      1 | check  |
+| 5V1 Zener diode        |      1 | check  |
+| LM324 (OP-Amp QUAD)    |      2 | check  |
+| 2 way screw terminal   |      2 |        |
+| Arduino Uno            |      1 |        |
+** Resistors
+| resistor amount | Value \(\Omega\) | inventory |
+|               1 |              200 |       220 |
+|               1 |              510 |        10 |
+|               1 |             1000 |         5 |
+|               1 |            10000 |         5 |
+|               1 |            12000 |        10 |
+|               1 |            24000 |        10 |
+** Capasitors (ceramic)
+| capasitor amount | \(nF\) |
+|                1 |    100 |
+|                1 |    470 |
+** ATX PSU
+*** DONE Should take +/- 12V rail
+CLOSED: [2022-11-14 Δευ 00:02]
+[[https://www.cableworks.gr/ilektronika/power-supply/meanwell/lrs-series/mean-well-lrs-150-12-12v-12.5a-150w/?ref=bestprice.gr][PS +/-12V]]
+*** DONE need the voltage regulator if no variable PSU for -5V
+CLOSED: [2022-11-14 Δευ 00:03]
+*** TODO wait for grobotronix in niktor32
+<2022-11-13 Κυρ>
+* PROJ Reference doc
+[[file:~/Documents/Potentiostat-arduino/ed5b00961_si_001.pdf][document]]
+* KIT
+[[https://www.skroutz.gr/s/9438978/Uno-R3-Starter-with-Motors-Kit-%CE%B3%CE%B9%CE%B1-Arduino.html][link]]
+* resistor combinations
++ 200 \(\Omega\) = 3 \(\parallel\) 510 \(\approx\) 170 \(\Omega\)
++
