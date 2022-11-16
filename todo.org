@@ -35,7 +35,7 @@ CLOSED: [2022-11-07 Δευ 17:45]
 |               1 |            24000 |        10 |
 ** Capasitors (ceramic)
 | capasitor amount | \(nF\) |
-|                1 |    100 |
+|                2 |    100 |
 |                1 |    470 |
 ** ATX PSU
 *** DONE Should take +/- 12V rail
