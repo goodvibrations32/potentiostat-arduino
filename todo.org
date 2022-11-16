@@ -9,7 +9,6 @@ CLOSED: [2022-11-07 Δευ 13:54]
  https://www.tinkercad.com/joinclass/L3NVJJM8GV1J
 
 Στην συνέχεια επίλεξε join with Nickname  βάζοντας ως nickname τον παρακάτω κωδικό:
-tm62200584
 
 Καλή αρχή!
 
@@ -44,7 +43,8 @@ CLOSED: [2022-11-14 Δευ 00:02]
 [[https://www.cableworks.gr/ilektronika/power-supply/meanwell/lrs-series/mean-well-lrs-150-12-12v-12.5a-150w/?ref=bestprice.gr][PS +/-12V]]
 *** DONE need the voltage regulator if no variable PSU for -5V
 CLOSED: [2022-11-14 Δευ 00:03]
-*** TODO wait for grobotronix in niktor32
+*** DONE wait for grobotronix in niktor32
+CLOSED: [2022-11-16 Τετ 14:41]
 <2022-11-13 Κυρ>
 * PROJ Reference doc
 [[file:~/Documents/Potentiostat-arduino/ed5b00961_si_001.pdf][document]]
