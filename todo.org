@@ -54,3 +54,6 @@ CLOSED: [2022-11-16 Τετ 14:41]
 * resistor combinations
 + 200 \(\Omega\) = 3 \(\parallel\) 510 \(\approx\) 170 \(\Omega\)
 +
+* TODO IN NEED
+** Voltage regulator -8V
++ [ ] atomo
