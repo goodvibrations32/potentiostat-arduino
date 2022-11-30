@@ -51,7 +51,13 @@ CLOSED: [2022-11-16 Τετ 14:41]
 [[file:~/Documents/Potentiostat-arduino/ed5b00961_si_001.pdf][document]]
 * KIT
 [[https://www.skroutz.gr/s/9438978/Uno-R3-Starter-with-Motors-Kit-%CE%B3%CE%B9%CE%B1-Arduino.html][link]]
-* TODO IN NEED
-SCHEDULED: <2022-11-17 Πεμ 18:00>
+* TODO add readme<2022-11-19 Σαβ>
+* TODO debug R.E. amp
++ [ ] check chip
++ [ ] check voltage there
++ [ ] check feedback
++ [ ] check all amps
+* DONE IN NEED
+CLOSED: [2022-11-19 Σαβ 16:27] SCHEDULED: <2022-11-17 Πεμ 18:00>
 ** Voltage regulator -8V
-+ [ ] atomo
++ [X] atomo
