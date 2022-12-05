@@ -1,0 +1,82 @@
+//Single Low frequency sine wave signal output 
+
+////////////////////////////////////////////////
+/// Limits:
+/// min/max current : -210 , + 220 μΑ
+/// min/max Voltage : |Vbias + Vapplied| <= |1000mV}
+/// min/max frequency: 0 mHz , 3 Hz
+
+////////////////////////////////////
+//Experiment Setup
+
+int const Amplitude = 500; // in mV ---> min = 100mV , max = 1000mV
+int const bias = 0; // in mV
+long frequency = 500; // in mHz
+long Scan_Rate = frequency; // scan rate value (mV/s) ---> max = 250 mV/s , min = 0 mV/s
+int const NS = 100; // number of scans
+
+
+///////////////////////////////////
+//Arduino Configuration
+
+int OUT_PIN = 10;
+int bias_value = map(bias,-1303,1243,0,255);
+int Amplitude_value = map(Amplitude,0,1270,0,255);
+int PWM_value = 0;
+float IN_PIN = A0; //ADC
+float Current = 0;
+int n = 0;
+float V_applied = 0 ;
+float Potstep = 0.0078; // fixed due to the DAC resolution
+int const count = 1; // 
+long time_interval= 3.706/(0.001*(Scan_Rate));
+
+//long time_interval=(1000000/((Scan_Rate)*128*1.55));
+float Io = 305 ; //Backround Current
+float Vo = 0 ; //Backround Voltage
+float PWM_sin = 0;
+float zero_bias_value = 1; 
+
+////////////////////////////////////
+
+void setup() {
+TCCR1B = TCCR1B & B11111000 | B00000001; //Set dividers to change PWM frequency
+Serial.begin(2000000);
+pinMode(OUT_PIN,OUTPUT);
+pinMode(IN_PIN,INPUT);
+delay(1000);
+}
+
+////////////////////////////////////
+// Loop Section
+
+void loop() {
+n = 0;
+while(n <= 1){
+
+///////////////////////////////////
+//Start scan
+
+for(PWM_value = 0; PWM_value <= 255*NS; PWM_value++){
+//Serial.print(PWM_value);
+//Serial.print(" ");
+float angle = 2*3.14*(PWM_value)*0.00392156862;
+PWM_sin = zero_bias_value + bias_value + 0.5*Amplitude_value*sin(angle);
+//PWM_sin = 0;
+analogWrite(OUT_PIN,PWM_sin);
+//Serial.print(PWM_sin);
+//Serial.print(" ");
+V_applied = map(PWM_sin,0,255,-1338,1267)-Vo; // applied Voltage in mV measured with a multimeter
+Serial.print(0.1*V_applied); // in cV
+Serial.print(" ");
+delay(time_interval);
+Current = (0.6931)*(0.6069*(analogRead(IN_PIN)-1)-Io); // Current reading outputs in uA!!!
+Serial.print(" ");
+Serial.print(Current);
+Serial.println(" ");
+}
+n=n+1;
+}
+}
+
+//Script ends
